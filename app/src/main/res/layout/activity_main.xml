@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorPrimary"
+    tools:context="com.biggerThanGreater.willy.rhymer.mainActivity">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="91dp"
+            android:src="@drawable/logo2"
+            android:layout_above="@+id/searchText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/imageView" />
+
+
+        <EditText
+            android:id="@+id/searchText"
+            android:hint="검색어"
+            android:textColorHint="@color/colorHint"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="8"
+            android:background="@drawable/edittext_main"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/instructButton"
+            android:layout_marginBottom="18dp"
+            android:text="사용법"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/searchText"
+            android:background="@drawable/button_instruct"/>
+
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_column="2"
+            android:layout_span="1"
+            android:text="RHYME"
+            android:textSize="15dp"
+            android:background="@drawable/button_search"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/searchText" />
+
+
+        <TextView
+            android:id="@+id/searchOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자모음"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            />
+
+        <CheckBox
+            android:id="@+id/choSung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="초성"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/searchOption1"
+            android:layout_toLeftOf="@+id/jungSung"/>
+
+        <CheckBox
+            android:id="@+id/jungSung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="중성"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/searchOption1"
+            android:layout_marginLeft="15dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <CheckBox
+            android:id="@+id/jhongSung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="종성"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/searchOption1"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/jungSung"/>
+
+
+
+        <CheckBox
+            android:id="@+id/peopleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첫말"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/choSung"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView" />
+
+        <CheckBox
+            android:id="@+id/placeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="끝말"
+            android:textColor="@color/colorWhite"
+            android:layout_alignBaseline="@+id/peopleName"
+            android:layout_alignBottom="@+id/peopleName"
+            android:layout_alignRight="@+id/imageView"/>
+
+        <CheckBox
+            android:id="@+id/brandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장소명"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/searchOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색확장"
+            android:visibility="invisible"
+            />
+
+        <CheckBox
+            android:id="@+id/choSungSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초성확장"
+            android:paddingRight="15dp"
+            android:visibility="invisible"
+            />
+
+        <CheckBox
+            android:id="@+id/jungSungSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중성확장"
+            android:visibility="invisible"
+            />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4075622845853806/5317808238">
+        </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
