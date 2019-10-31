@@ -1,6 +1,7 @@
 # 초성검색 서치라임
 
 Playstore 에 배포되어있는 어플리케이션 서치라임의 소스코드입니다.
+
 https://play.google.com/store/apps/details?id=com.biggerThanGreater.willy.rhymer
 
 ## MainActivity.java
